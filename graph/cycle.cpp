@@ -54,3 +54,29 @@
 //         cout<<"There is no cycle detected"<<endl;
 //     }
 // }
+#include<iostream>
+using namespace std;
+class node{
+    int data;
+    node* right;
+    node* left;
+    node(int data){
+        this->data=data;
+        this->left=NULL;
+        this->right=NULL;
+    }
+node* create(int data){
+  if(data==-1){
+    return nullptr;
+  }
+  node* root=new node(data);
+  cout<<"Enter the data for left part";
+  int leftdata,rightdata;
+  root->left=create(leftdata);
+  root->right=create(rightdata);
+}
+};
+int main(){
+    cout<<"Enter the data for root node";
+   
+}
